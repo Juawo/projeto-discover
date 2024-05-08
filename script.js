@@ -17,7 +17,7 @@ function toggleMode(){
   //substitindo a imagem
   if (html.classList.contains('light')){
     // se o light mode estiver ativo
-    img.setAttribute('src','./assets/avatar-light.jpg')
+    img.setAttribute('src','./assets/avatar.png')
     img.setAttribute('alt'," Foto de João Pedro de terno em fundo branco")
   } else {
     // se o light mode não estiver ativo
