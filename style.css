@@ -44,7 +44,8 @@ body * {
 
 #container {
   /*border: largura da borda, estilo da borda , cor da borda*/
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /*Divide o espaço vazio que há e coloca igualmente em todos os lados, mas por uma regra do css ele não atua na parte de cima e de baixo
   margin possui 4 espaços, sendo cada um referente as direções
   */
