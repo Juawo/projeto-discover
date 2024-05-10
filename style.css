@@ -26,7 +26,7 @@
   --translate-switch: 0;
 }
 body {
-  
+
   /*background(color, image, repeat, positions/size)*/
   background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
@@ -69,7 +69,6 @@ body * {
 }
 
 /* Switch */
-
 #switch {
   position: relative;
   width: 64px;
@@ -82,12 +81,21 @@ body * {
   background: white var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
-
   position: absolute;
   top: 50%;
   right: var(--translate-switch);
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out 0.2s;
+}
+
+
+.light #switch button {
+  animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
@@ -180,5 +188,23 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
